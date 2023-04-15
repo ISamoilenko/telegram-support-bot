@@ -13,7 +13,6 @@ dispatcher = updater.dispatcher
 setup_dispatcher(dispatcher)
 
 
-
 # Run bot
 if HEROKU_APP_NAME is None:  # pooling mode
     print("Can't detect 'HEROKU_APP_NAME' env. Running bot in pooling mode.")
