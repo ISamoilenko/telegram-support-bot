@@ -9,7 +9,7 @@ update_queue = queue.Queue()
 
 # Setup bot handlers
 updater = Updater(TELEGRAM_TOKEN, update_queue)
-dispatcher = updater.dispatcher
+dispatcher = updater.job_queue.dispatcher
 setup_dispatcher(dispatcher)
 
 
