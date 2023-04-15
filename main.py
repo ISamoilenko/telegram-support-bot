@@ -4,13 +4,11 @@ from handlers import setup_dispatcher
 from settings import TELEGRAM_TOKEN, HEROKU_APP_NAME, PORT
 
 # Setup bot handlers
-from settings import TELEGRAM_TOKEN
-myBot = TELEGRAM_TOKEN('TELEGRAM_TOKEN')
-updater = Updater(myBot)
-#updater = Updater(TELEGRAM_TOKEN)
-
-dp = updater.dispatcher
+updater = Updater(TELEGRAM_TOKEN)
+dp: Dispatcher = updater.dispatcher
 dp = setup_dispatcher(dp)
+
+
 
 # Run bot
 if HEROKU_APP_NAME is None:  # pooling mode
