@@ -4,7 +4,9 @@ from handlers import setup_dispatcher
 from settings import TELEGRAM_TOKEN, HEROKU_APP_NAME, PORT
 
 # Setup bot handlers
-updater = Updater(TELEGRAM_TOKEN)
+bot = telegram.Bot(token='TELEGRAM_TOKEN')
+updater = Updater(token='TELEGRAM_TOKEN', use_context=True)
+#updater = Updater(TELEGRAM_TOKEN)
 dp: Dispatcher = updater.dispatcher
 dp = setup_dispatcher(dp)
 
